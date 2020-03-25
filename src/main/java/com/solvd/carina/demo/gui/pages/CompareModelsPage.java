@@ -24,26 +24,26 @@ import org.openqa.selenium.support.FindBy;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.solvd.carina.demo.gui.components.compare.CondidateBlock;
+import com.solvd.carina.demo.gui.components.compare.CandidateBlock;
 import com.solvd.carina.demo.gui.components.compare.ModelSpecs;
 
 public class CompareModelsPage extends AbstractPage {
     @FindBy(xpath = "//div[contains(@class, 'candidate-search')]")
-    private List<CondidateBlock> condidateBlocks;
+    private List<CandidateBlock> candidateBlocks;
 
     public CompareModelsPage(WebDriver driver) {
         super(driver);
     }
 
     public List<ModelSpecs> compareModels(String... models) {
-        CondidateBlock condidateBlock;
+        CandidateBlock candidateBlock;
         List<ModelSpecs> modelSpecs = new ArrayList<>();
         ModelSpecs modelSpec;
         for (int index = 0; index < models.length; index++) {
             modelSpec = new ModelSpecs();
-            condidateBlock = condidateBlocks.get(index);
-            condidateBlock.sendKeysToInputField(models[index]);
-            condidateBlock.getFirstPhone();
+            candidateBlock = candidateBlocks.get(index);
+            candidateBlock.sendKeysToInputField(models[index]);
+            candidateBlock.getFirstPhone();
             for (ModelSpecs.SpecType type : ModelSpecs.SpecType.values()) {
                 ExtendedWebElement spec = findExtendedWebElement(By.xpath(
                         String.format("//tr[.//a[text()='%s']]//td[@class='nfo'][%d]", type.getType(), index + 1)));
