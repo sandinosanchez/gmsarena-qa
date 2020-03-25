@@ -1,3 +1,4 @@
+/*
 package com.solvd.carina.demo.api.soap;
 
 import com.qaprosoft.carina.core.foundation.utils.R;
@@ -22,3 +23,4 @@ public class CountryInfoClient extends WebServiceGatewaySupport {
     }
 
 }
+*/

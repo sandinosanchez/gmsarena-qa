@@ -1,3 +1,4 @@
+/*
 package com.solvd.carina.demo;
 
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
@@ -14,11 +15,13 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+*/
 /**
  * This sample shows how to create SOAP API tests.
  *
  * @author qpsdemo
- */
+ *//*
+
 @SpringBootTest
 @ContextConfiguration(classes = {CountryInfoConfiguration.class})
 public class SOAPSampleTest extends SOAPTest {
@@ -36,3 +39,4 @@ public class SOAPSampleTest extends SOAPTest {
     }
 
 }
+*/

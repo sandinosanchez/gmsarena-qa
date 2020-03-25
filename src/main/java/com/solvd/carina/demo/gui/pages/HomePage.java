@@ -32,6 +32,9 @@ public class HomePage extends AbstractPage {
     @FindBy(id = "footmenu")
     private FooterMenu footerMenu;
 
+    @FindBy(css = ".signup-icon")
+    private ExtendedWebElement signUpLink;
+
     @FindBy(xpath = "//div[contains(@class, 'brandmenu-v2')]//a")
     private List<ExtendedWebElement> brandLinks;
 
@@ -54,6 +57,12 @@ public class HomePage extends AbstractPage {
             }
         }
         throw new RuntimeException("Unable to open brand: " + brand);
+    }
+
+    public RegistrationPage signUp() {
+        LOGGER.info("clicking sign up button...");
+        signUpLink.click();
+        return new RegistrationPage(driver);
     }
     
     public WeValuePrivacyAd getWeValuePrivacyAd() {
