@@ -5,18 +5,13 @@ import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
+public abstract class MenuPage extends AbstractPage {
 
-public class VideoPage extends MenuPage {
+    @FindBy(xpath = "//h1[contains(@class, 'article-info-name')]")
+    private ExtendedWebElement title;
 
-    @FindBy(xpath = "//div[@id='review-body']//iframe")
-    private List<ExtendedWebElement> videos;
-
-    public VideoPage(WebDriver driver) {
+    public MenuPage(WebDriver driver) {
         super(driver);
     }
 
-    public int getVideosSize() {
-        return videos.size();
-    }
 }

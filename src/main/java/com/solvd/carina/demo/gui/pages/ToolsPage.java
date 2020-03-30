@@ -5,18 +5,16 @@ import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
+public class ToolsPage extends MenuPage {
 
-public class VideoPage extends MenuPage {
+    @FindBy(xpath = "//h3[text()='Compare']")
+    private ExtendedWebElement compareTitle;
 
-    @FindBy(xpath = "//div[@id='review-body']//iframe")
-    private List<ExtendedWebElement> videos;
-
-    public VideoPage(WebDriver driver) {
+    public ToolsPage(WebDriver driver) {
         super(driver);
     }
 
-    public int getVideosSize() {
-        return videos.size();
+    public String getCompareTitle() {
+        return compareTitle.getText();
     }
 }

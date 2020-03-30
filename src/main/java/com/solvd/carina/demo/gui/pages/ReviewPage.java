@@ -7,20 +7,13 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class ReviewPage extends AbstractPage {
-
-    @FindBy(xpath = "//h1[contains(@class, 'article-info-name')]")
-    private ExtendedWebElement tittle;
+public class ReviewPage extends MenuPage {
 
     @FindBy(xpath = "//div[contains(@class, 'floating-title')]//a")
     private List<ExtendedWebElement> reviews;
 
     public ReviewPage(WebDriver driver) {
         super(driver);
-    }
-
-    public String getTitle() {
-        return tittle.getText();
     }
 
     public int getReviewsSize() {

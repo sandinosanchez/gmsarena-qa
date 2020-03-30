@@ -5,14 +5,15 @@ import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class FeaturePage extends AbstractPage {
+import java.util.List;
 
-    @FindBy(xpath = "//h1[contains(@class, 'article-info-name')]")
-    private ExtendedWebElement tittle;
+public class FeaturePage extends MenuPage {
 
-    @FindBy(xpath = )
+    @FindBy(xpath = "")
+    private List<ExtendedWebElement> features;
 
     public FeaturePage(WebDriver driver) {
         super(driver);
     }
+
 }
