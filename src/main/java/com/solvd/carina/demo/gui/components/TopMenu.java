@@ -55,6 +55,9 @@ public class TopMenu extends AbstractUIObject {
     @FindBy(xpath = "//ul//a[text()='Contact']")
     private ExtendedWebElement contactLink;
 
+    @FindBy(xpath = "//button[@role='button']")
+    private ExtendedWebElement subMenuButton;
+
     public TopMenu(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
@@ -80,42 +83,72 @@ public class TopMenu extends AbstractUIObject {
     }
 
     public ContactPage clickContact() {
+        LOGGER.info("Clicking Contact page...");
+        subMenuButton.click();
+        contactLink.click();
         return new ContactPage(driver);
     }
 
     public CoveragePage clickCoverage() {
+        LOGGER.info("Clicking Coverage page...");
+        subMenuButton.click();
+        coverageLink.click();
         return new CoveragePage(driver);
     }
 
     public GlossaryPage clickGlossary() {
+        LOGGER.info("Clicking Glossary page...");
+        subMenuButton.click();
+        glossaryLink.click();
         return new GlossaryPage(driver);
     }
 
     public HomePage clickHome() {
+        LOGGER.info("Clicking Home page...");
+        subMenuButton.click();
+        homeLink.click();
         return new HomePage(driver);
     }
 
     public ReviewPage clickReview() {
+        LOGGER.info("Clicking Review page...");
+        subMenuButton.click();
+        reviewLink.click();
         return new ReviewPage(driver);
     }
 
     public PhoneFinderPage clickPhoneFinder() {
+        LOGGER.info("Clicking Phone Finder page...");
+        subMenuButton.click();
+        phoneFinderLink.click();
         return new PhoneFinderPage(driver);
     }
 
     public NewsPage clickNews() {
+        LOGGER.info("Clicking News page...");
+        subMenuButton.click();
+        newsLink.click();
         return new NewsPage(driver);
     }
 
     public ToolsPage clickTools() {
+        LOGGER.info("Clicking Tools page...");
+        subMenuButton.click();
+        toolsLink.click();
         return new ToolsPage(driver);
     }
 
     public VideoPage clickVideo() {
+        LOGGER.info("Clicking Video page...");
+        subMenuButton.click();
+        videoLink.click();
         return new VideoPage(driver);
     }
 
     public FeaturePage clickFeature() {
+        LOGGER.info("Clicking Feature page...");
+        subMenuButton.click();
+        featuredLink.click();
         return new FeaturePage(driver);
     }
 

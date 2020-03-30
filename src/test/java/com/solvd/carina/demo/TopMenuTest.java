@@ -18,6 +18,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickContactPage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         ContactPage cp = hp.getTopMenu().clickContact();
@@ -28,6 +29,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickGlossaryPage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         GlossaryPage glossaryPage = hp.getTopMenu().clickGlossary();
@@ -38,6 +40,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickPhoneFinderPage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         PhoneFinderPage phoneFinderPage = hp.getTopMenu().clickPhoneFinder();
@@ -48,6 +51,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickToolsPage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         ToolsPage toolsPage = hp.getTopMenu().clickTools();
@@ -58,6 +62,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickFeaturePage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         FeaturePage featurePage = hp.getTopMenu().clickFeature();
@@ -68,6 +73,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickVideoPage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         VideoPage videoPage = hp.getTopMenu().clickVideo();
@@ -78,6 +84,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickReviewPage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         ReviewPage reviewPage = hp.getTopMenu().clickReview();
@@ -89,6 +96,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickNewsPage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         NewsPage newsPage = hp.getTopMenu().clickNews();
@@ -99,6 +107,7 @@ public class TopMenuTest extends AbstractTest {
     @Test
     public void testClickCoveragePage() {
         HomePage hp = new HomePage(getDriver());
+        hp.open();
         assertTrue(hp.isPageOpened());
 
         CoveragePage coveragePage = hp.getTopMenu().clickCoverage();
