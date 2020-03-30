@@ -17,7 +17,10 @@ package com.solvd.carina.demo.gui.pages;
 
 import java.util.List;
 
+import com.solvd.carina.demo.gui.components.LoginBox;
+import com.solvd.carina.demo.gui.components.TopMenu;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -27,23 +30,19 @@ import com.solvd.carina.demo.gui.components.FooterMenu;
 import com.solvd.carina.demo.gui.components.WeValuePrivacyAd;
 
 public class HomePage extends AbstractPage {
-    Logger LOGGER = Logger.getLogger(HomePage.class);
+    private static final Logger LOGGER = Logger.getLogger(HomePage.class);
     
     @FindBy(id = "footmenu")
     private FooterMenu footerMenu;
 
-    @FindBy(css = ".signup-icon")
-    private ExtendedWebElement signUpLink;
+    @FindBy(css = ".wrapper.clearfix")
+    private TopMenu topMenu;
 
     @FindBy(xpath = "//div[contains(@class, 'brandmenu-v2')]//a")
     private List<ExtendedWebElement> brandLinks;
 
     public HomePage(WebDriver driver) {
         super(driver);
-    }
-
-    public FooterMenu getFooterMenu() {
-        return footerMenu;
     }
 
     public BrandModelsPage selectBrand(String brand) {
@@ -59,10 +58,13 @@ public class HomePage extends AbstractPage {
         throw new RuntimeException("Unable to open brand: " + brand);
     }
 
-    public RegistrationPage signUp() {
-        LOGGER.info("clicking sign up button...");
-        signUpLink.click();
-        return new RegistrationPage(driver);
+
+    public FooterMenu getFooterMenu() {
+        return footerMenu;
+    }
+
+    public TopMenu getTopMenu() {
+        return topMenu;
     }
     
     public WeValuePrivacyAd getWeValuePrivacyAd() {
