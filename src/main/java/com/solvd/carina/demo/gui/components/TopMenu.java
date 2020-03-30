@@ -2,8 +2,7 @@ package com.solvd.carina.demo.gui.components;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractUIObject;
-import com.solvd.carina.demo.gui.pages.HomePage;
-import com.solvd.carina.demo.gui.pages.SignUpPage;
+import com.solvd.carina.demo.gui.pages.*;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
@@ -60,13 +59,13 @@ public class TopMenu extends AbstractUIObject {
         super(driver, searchContext);
     }
 
-    public SignUpPage signUp() {
+    public SignUpPage clickSignUp() {
         LOGGER.info("Clicking sign up button...");
         signUpLink.click();
         return new SignUpPage(driver);
     }
 
-    public HomePage login(String email, String password) {
+    public HomePage clickLogin(String email, String password) {
         LOGGER.info("Clicking login button...");
         loginButton.click();
         return new LoginBox(driver).login(email, password);
@@ -76,5 +75,48 @@ public class TopMenu extends AbstractUIObject {
         return null;
     }
 
+    public void search(String parameter) {
+
+    }
+
+    public ContactPage clickContact() {
+        return new ContactPage(driver);
+    }
+
+    public CoveragePage clickCoverage() {
+        return new CoveragePage(driver);
+    }
+
+    public GlossaryPage clickGlossary() {
+        return new GlossaryPage(driver);
+    }
+
+    public HomePage clickHome() {
+        return new HomePage(driver);
+    }
+
+    public ReviewPage clickReview() {
+        return new ReviewPage(driver);
+    }
+
+    public PhoneFinderPage clickPhoneFinder() {
+        return new PhoneFinderPage(driver);
+    }
+
+    public NewsPage clickNews() {
+        return new NewsPage(driver);
+    }
+
+    public ToolsPage clickTools() {
+        return new ToolsPage(driver);
+    }
+
+    public VideoPage clickVideo() {
+        return new VideoPage(driver);
+    }
+
+    public FeaturePage clickFeature() {
+        return new FeaturePage(driver);
+    }
 
 }

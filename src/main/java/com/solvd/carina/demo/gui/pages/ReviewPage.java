@@ -16,6 +16,11 @@ public class ReviewPage extends MenuPage {
         super(driver);
     }
 
+    @Override
+    public boolean isUniqueElementPresent() {
+        return reviews.get(0).isElementPresent();
+    }
+
     public int getReviewsSize() {
         return reviews.size();
     }

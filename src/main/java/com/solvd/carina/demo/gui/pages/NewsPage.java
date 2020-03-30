@@ -24,7 +24,7 @@ import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebEleme
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import com.solvd.carina.demo.gui.components.NewsItem;
 
-public class NewsPage extends AbstractPage {
+public class NewsPage extends MenuPage {
 
     @FindBy(className="searchFor")
     private ExtendedWebElement searchTextField;
@@ -38,6 +38,11 @@ public class NewsPage extends AbstractPage {
     public NewsPage(WebDriver driver) {
         super(driver);
         setPageURL("/news.php3");
+    }
+
+    @Override
+    public boolean isUniqueElementPresent() {
+        return searchButton.isElementPresent();
     }
 
     public List<NewsItem> searchNews(String q) {

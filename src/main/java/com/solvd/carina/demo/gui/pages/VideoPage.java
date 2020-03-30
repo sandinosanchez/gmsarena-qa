@@ -16,6 +16,11 @@ public class VideoPage extends MenuPage {
         super(driver);
     }
 
+    @Override
+    public boolean isUniqueElementPresent() {
+        return videos.get(0).isElementPresent();
+    }
+
     public int getVideosSize() {
         return videos.size();
     }

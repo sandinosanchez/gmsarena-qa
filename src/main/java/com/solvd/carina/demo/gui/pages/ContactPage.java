@@ -1,6 +1,7 @@
 package com.solvd.carina.demo.gui.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -11,9 +12,16 @@ public class ContactPage extends MenuPage {
 
     public ContactPage(WebDriver driver) {
         super(driver);
+        setPageURL("contact.php3");
+    }
+
+    @Override
+    public boolean isUniqueElementPresent() {
+        return subTitle.isElementPresent();
     }
 
     public String getSubtitleText() {
         return subTitle.getText();
     }
+
 }

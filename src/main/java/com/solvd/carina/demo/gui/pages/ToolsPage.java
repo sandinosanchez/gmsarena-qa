@@ -14,6 +14,11 @@ public class ToolsPage extends MenuPage {
         super(driver);
     }
 
+    @Override
+    public boolean isUniqueElementPresent() {
+        return compareTitle.isElementPresent();
+    }
+
     public String getCompareTitle() {
         return compareTitle.getText();
     }

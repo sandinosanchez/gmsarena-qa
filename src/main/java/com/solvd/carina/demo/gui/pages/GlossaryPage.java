@@ -13,6 +13,11 @@ public class GlossaryPage extends MenuPage {
         super(driver);
     }
 
+    @Override
+    public boolean isUniqueElementPresent() {
+        return firstElement.isElementPresent();
+    }
+
     public String getFirstElementTitle() {
         return firstElement.getText();
     }

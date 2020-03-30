@@ -16,6 +16,11 @@ public class FeaturePage extends MenuPage {
         super(driver);
     }
 
+    @Override
+    public boolean isUniqueElementPresent() {
+        return reviewTitle.isElementPresent();
+    }
+
     public String getReviewTitle() {
         return reviewTitle.getText();
     }

@@ -12,4 +12,9 @@ public class CoveragePage extends MenuPage {
     public CoveragePage(WebDriver driver) {
         super(driver);
     }
+
+    @Override
+    public boolean isUniqueElementPresent() {
+        return selectCountries.isElementPresent();
+    }
 }

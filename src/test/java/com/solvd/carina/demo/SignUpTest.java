@@ -17,7 +17,7 @@ public class SignUpTest extends AbstractTest {
         homePage.open();
         assertTrue(homePage.isPageOpened(), "Home page is not opened");
 
-        SignUpPage signUpPage = homePage.getTopMenu().signUp();
+        SignUpPage signUpPage = homePage.getTopMenu().clickSignUp();
         assertTrue(signUpPage.isPageOpened(), "Sign up page is not opened");
 
         signUpPage.signUp(nickname, email, password);
@@ -31,7 +31,7 @@ public class SignUpTest extends AbstractTest {
         homePage.open();
         assertTrue(homePage.isPageOpened(), "Home page is not opened");
 
-        SignUpPage signUpPage = homePage.getTopMenu().signUp();
+        SignUpPage signUpPage = homePage.getTopMenu().clickSignUp();
         assertTrue(signUpPage.isPageOpened(), "Sign up page is not opened");
 
         signUpPage.signUp(nickname, email, password);

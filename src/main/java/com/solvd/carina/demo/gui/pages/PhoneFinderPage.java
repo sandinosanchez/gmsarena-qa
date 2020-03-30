@@ -14,6 +14,11 @@ public class PhoneFinderPage extends MenuPage {
         super(driver);
     }
 
+    @Override
+    public boolean isUniqueElementPresent() {
+        return brandSearchTitle.isElementPresent();
+    }
+
     public String getBrandSearchTitle() {
         return brandSearchTitle.getText();
     }
