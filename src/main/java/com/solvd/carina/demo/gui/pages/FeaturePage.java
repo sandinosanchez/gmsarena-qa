@@ -9,11 +9,14 @@ import java.util.List;
 
 public class FeaturePage extends MenuPage {
 
-    @FindBy(xpath = "")
-    private List<ExtendedWebElement> features;
+    @FindBy(xpath = "//h3[text()='Realme 6 in for review']")
+    private ExtendedWebElement reviewTitle;
 
     public FeaturePage(WebDriver driver) {
         super(driver);
     }
 
+    public String getReviewTitle() {
+        return reviewTitle.getText();
+    }
 }
