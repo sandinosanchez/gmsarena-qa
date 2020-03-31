@@ -77,7 +77,9 @@ public class TopMenu extends AbstractUIObject {
     // //div[contains(@class, 'phone-results')]//li[not(contains(@class, 'permanent'))]//a
 
     public HomePage logout() {
-        return null;
+        LOGGER.info("Clicking logout button...");
+        logoutButton.click();
+        return new HomePage(driver);
     }
 
     public ResultPage search(String model) {

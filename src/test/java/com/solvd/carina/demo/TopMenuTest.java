@@ -8,13 +8,6 @@ import org.testng.annotations.Test;
 
 public class TopMenuTest extends AbstractTest {
 
-
-//    @Test
-//    public void testClickHomePage() {
-//        HomePage hp = new HomePage(getDriver());
-//        assertTrue(hp.isPageOpened());
-//    }
-
     @Test
     public void testClickContactPage() {
         HomePage hp = new HomePage(getDriver());

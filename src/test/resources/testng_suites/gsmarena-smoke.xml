@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite verbose="1" name="Carina Demo Tests GSM ARENA - Web Sample" skipfailedinvocationcounts="false" junit="false" parallel="methods" annotations="JDK">
+<suite verbose="1" name="GSM Arena smoke suite" skipfailedinvocationcounts="false" junit="false" parallel="methods" annotations="JDK">
 
     <listeners>
         <listener class-name="com.qaprosoft.zafira.listener.ZafiraListener"/>
@@ -21,9 +21,26 @@
     <parameter name="jenkinsJobExecutionOrder" value="1"/>
     <parameter name="jenkinsJobExecutionMode" value="continue"/>
 
-    <test name="GSM arena web tests">
+    <test name="Smoke account tests">
+        <classes>
+            <class name="com.solvd.carina.demo.AccountTest">
+                <methods>
+                    <include name="testLogin"/>
+                    <include name="testLogout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Smoke search tests">
         <classes>
             <class name="com.solvd.carina.demo.SearchDevicesTest"/>
+        </classes>
+    </test>
+
+    <test name="Smoke menu tests">
+        <classes>
+            <class name="com.solvd.carina.demo.TopMenuTest"/>
         </classes>
     </test>
 
