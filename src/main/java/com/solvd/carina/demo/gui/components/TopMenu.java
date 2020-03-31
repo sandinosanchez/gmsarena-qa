@@ -4,11 +4,11 @@ import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebEleme
 import com.qaprosoft.carina.core.gui.AbstractUIObject;
 import com.solvd.carina.demo.gui.pages.*;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
 
 public class TopMenu extends AbstractUIObject {
     private static final Logger LOGGER = Logger.getLogger(TopMenu.class);
@@ -74,12 +74,18 @@ public class TopMenu extends AbstractUIObject {
         return new LoginBox(driver).login(email, password);
     }
 
+    // //div[contains(@class, 'phone-results')]//li[not(contains(@class, 'permanent'))]//a
+
     public HomePage logout() {
         return null;
     }
 
-    public void search(String parameter) {
-
+    public ResultPage search(String model) {
+        LOGGER.info("Searching for " + model + "...");
+        inputSearch.type(model);
+        inputSearch.sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//div[contains(@class, 'makers')]//a")).click();
+        return new ResultPage(driver);
     }
 
     public ContactPage clickContact() {

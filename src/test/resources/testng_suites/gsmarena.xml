@@ -23,11 +23,7 @@
 
     <test name="GSM arena web tests">
         <classes>
-            <class name="com.solvd.carina.demo.TopMenuTest">
-                <methods>
-                    <exclude name="signUpSuccessful"/>
-                </methods>
-            </class>
+            <class name="com.solvd.carina.demo.SearchDevicesTest"/>
         </classes>
     </test>
 
