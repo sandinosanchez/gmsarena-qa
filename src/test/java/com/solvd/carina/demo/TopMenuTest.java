@@ -16,7 +16,6 @@ public class TopMenuTest extends AbstractTest {
 
         ContactPage cp = hp.getTopMenu().clickContact();
         assertTrue(cp.isPageOpened("https://www.gsmarena.com/contact.php3", "Contact us"), "Glossary page not loaded");
-//        assertTrue(cp.isUniqueElementPresent(), "Contact page not loaded");
     }
 
     @Test
@@ -27,7 +26,6 @@ public class TopMenuTest extends AbstractTest {
 
         GlossaryPage glossaryPage = hp.getTopMenu().clickGlossary();
         assertTrue(glossaryPage.isPageOpened("https://www.gsmarena.com/glossary.php3", "Mobile terms glossary"), "Glossary page not loaded");
-//        assertTrue(glossaryPage.isUniqueElementPresent(), "Glossary page not loaded");
     }
 
     @Test
@@ -38,7 +36,6 @@ public class TopMenuTest extends AbstractTest {
 
         PhoneFinderPage phoneFinderPage = hp.getTopMenu().clickPhoneFinder();
         assertTrue(phoneFinderPage.isPageOpened("https://www.gsmarena.com/search.php3?", "Phone finder"), "Phone Finder page not loaded");
-//        assertTrue(phoneFinderPage.isUniqueElementPresent(), "Phone Finder page not loaded");
     }
 
     @Test
@@ -49,7 +46,6 @@ public class TopMenuTest extends AbstractTest {
 
         ToolsPage toolsPage = hp.getTopMenu().clickTools();
         assertTrue(toolsPage.isPageOpened("https://www.gsmarena.com/tools.php3", "GSMArena Tools & Features"), "Tools page not loaded");
-//        assertTrue(toolsPage.isUniqueElementPresent(), "Tools Finder page not loaded");
     }
 
     @Test
@@ -60,7 +56,6 @@ public class TopMenuTest extends AbstractTest {
 
         FeaturePage featurePage = hp.getTopMenu().clickFeature();
         assertTrue(featurePage.isPageOpened("https://www.gsmarena.com/news.php3?sTag=Featured", "Articles tagged \"Featured\""), "Features page not loaded");
-//        assertTrue(featurePage.isUniqueElementPresent(), "Features page not loaded");
     }
 
     @Test
@@ -71,7 +66,6 @@ public class TopMenuTest extends AbstractTest {
 
         VideoPage videoPage = hp.getTopMenu().clickVideo();
         assertTrue(videoPage.isPageOpened("https://www.gsmarena.com/videos.php3", "Videos"), "Videos page not loaded");
-//        assertTrue(toolsPage.isUniqueElementPresent(), "Videos page not loaded");
     }
 
     @Test
@@ -82,7 +76,6 @@ public class TopMenuTest extends AbstractTest {
 
         ReviewPage reviewPage = hp.getTopMenu().clickReview();
         assertTrue(reviewPage.isPageOpened("https://www.gsmarena.com/reviews.php3", "Reviews"), "Reviews page not loaded");
-//        assertTrue(toolsPage.isUniqueElementPresent(), "Reviews page not loaded");
     }
 
 
@@ -94,7 +87,6 @@ public class TopMenuTest extends AbstractTest {
 
         NewsPage newsPage = hp.getTopMenu().clickNews();
         assertTrue(newsPage.isPageOpened("https://www.gsmarena.com/news.php3", "News"), "News page not loaded");
-//        assertTrue(toolsPage.isUniqueElementPresent(), "News page not loaded");
     }
 
     @Test
@@ -105,7 +97,6 @@ public class TopMenuTest extends AbstractTest {
 
         CoveragePage coveragePage = hp.getTopMenu().clickCoverage();
         assertTrue(coveragePage.isPageOpened("https://www.gsmarena.com/network-bands.php3", "Network coverage"), "Coverage page not loaded");
-//        assertTrue(toolsPage.isUniqueElementPresent(), "Coverage page not loaded");
     }
 
 }
