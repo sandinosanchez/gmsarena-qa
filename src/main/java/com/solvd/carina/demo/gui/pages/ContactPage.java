@@ -9,6 +9,10 @@ public class ContactPage extends MenuPage {
 
     @FindBy(xpath = "//h3[text()='We do appreciate your feedback']")
     private ExtendedWebElement subTitle;
+    
+    private String s2 = null;
+    
+    private int unusedInt = 0;
 
     public ContactPage(WebDriver driver) {
         super(driver);
@@ -21,6 +25,9 @@ public class ContactPage extends MenuPage {
     }
 
     public String getSubtitleText() {
+        if (unusedInt == 0) {
+            System.out.println("0");
+        }
         return subTitle.getText();
     }
 
